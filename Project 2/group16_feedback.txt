@@ -1,0 +1,32 @@
+@GRADE
+Part A | Part B | Part C | Total Grade
+   21  |   58   |    4   |    83
+@COMMENTS
+Part A:
+-1 primitive functions are predetermined thus their structure including parameters should be predetermined e.g. move(no parameter), turn(1 parameter: right or left)
+-1 no receive primitive function defined
+-1 no input statement(to get input from the user) defined in BNF
+-1 no constant defined
+
+Part B:
+-1 no receive(one of the primitive functions) rule defined
+-1 no input rule(to get input from the user) defined in yacc
+-5 not printing error line correctly
+
+Part C:
+-1 no else example, no input example
+-5 not a valid test e.g. line 33 'func doTheThing <- var isItGrabbed ' not in the grammar
+
+
+@GRADE_CORRECTION
+Part A | Part B | Part C | Total Grade
+   23  |   65   |    9   |    97
+@COMMENTS
+Part A:
+-1 primitive functions are predetermined thus their structure including parameters should be predetermined e.g. move(no parameter), turn(1 parameter: right or left)
+-1 no constant defined
+
+Part B:
+
+Part C:
+-1 no else example, no input example

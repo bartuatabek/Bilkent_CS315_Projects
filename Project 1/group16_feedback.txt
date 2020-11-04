@@ -1,0 +1,25 @@
+@GRADE
+Part A | Part B | Part C | Total Grade
+   27  |   39   |   29   |    95
+
+@COMMENTS
+
+Part A:
+
+-2 Unclear parameters of primitive functions
+"All primitive type of functions takes infinitive number of arguments or none"
+<function_call_stmt> → <function_names> <- <function_arguments> |<function_names>
+* The parameters of primitive functions should be restricted for reliability
+
+-1 BNF Syntax
+<string> → combination of all ASCII character sequences
+
+Part B:
+
+-1 How do you differentiate the value assigned to a variable?(variable or a string)? 
+
+Part C:
+
+-1 Wrong output
+#this is a function call
+returns nothing but it should return comment 

@@ -1,0 +1,75 @@
+# variable definitions
+var noOfTurns
+var isBox1Grabbed = false
+var isBox2Released = true
+# this is an assignment
+noOfTurns = 20
+#this is a loop
+iterate if noOfTurns > 0
+begin
+ #this is a function call
+ move
+ turn
+ noOfTurns = noOfTurns - 1
+end
+#this is a function definition
+func doTheThing <- var isItGrabbed
+begin
+ #read data from sensor 13 and move - 1
+ var sensor13 = readData <- 13
+ move <- sensor13 - 1.2
+ #0 left, 1 right
+ if readData <- 5 > 3 #examine
+ begin
+ turn <- 0, 24.6
+ end
+ release
+ return true
+end
+isBox1Grabbed = doTheThing <- isBox1Grabbed
+if isBox1Grabbed
+begin
+ pickBox2
+ isBox2Released = false
+end
+func pickBox2
+begin
+ iterate from 1 to 10
+ begin
+ move
+ end
+ grab
+end
+var isOperationSum = 0
+var isOperationSubtract = 1
+var isOperationMultiply = 2
+var isOperationDivision = 3
+var isOperationModulus = 4
+var fail = false
+func calculate <- var operation, var no1, var no2
+begin
+ if operation == isOperationSum
+ begin
+ return no1 + no2
+ end
+ if operation == isOperationSubtract
+ begin
+ return no1 - no2
+ end
+ if operation == isOperationMultiply
+ begin
+ return no1 * no2
+ end
+ if operation == isOperationDivision
+ begin
+ return no1 / no2
+ end
+ if operation == isOperationModulus
+ begin
+ return no1 % no2
+ end
+ return fail
+end
+var result = calculate <- 0, 1, 2.5
+#send sensor 6 to resulting number
+sendData <- 6, result
